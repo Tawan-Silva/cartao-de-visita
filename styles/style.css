@@ -15,16 +15,26 @@
 }
 
 main {
-  width: 100vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left bottom, left top, from(#c322bf), color-stop(41%, #e6a55b), color-stop(64%, #9647f0), to(#fd802d));
+  background: linear-gradient(0deg, #c322bf 0%, #e6a55b 41%, #9647f0 64%, #fd802d 100%);
 }
 
 main .card {
   margin: 100px auto 0;
   width: 400px;
   height: 600px;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
+  -webkit-perspective: 700px;
+          perspective: 700px;
 }
 
 main .card .card__inner {
@@ -71,6 +81,67 @@ main .card .card__inner .card__face--front h2 {
   font-size: 20px;
 }
 
+main .card .card__inner .card__face--front .seta-img {
+  height: 100%;
+}
+
+main .card .card__inner .card__face--front .seta-img img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  bottom: 2%;
+  right: 2%;
+}
+
+main .card .card__inner .card__face--front .front-img {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+
+main .card .card__inner .card__face--front .front-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid white 5px;
+  -webkit-animation-name: pulo;
+          animation-name: pulo;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background: var(--primary);
+}
+
+@-webkit-keyframes pulo {
+  50% {
+    -webkit-transform: translateY(-4rem);
+            transform: translateY(-4rem);
+  }
+}
+
+@keyframes pulo {
+  50% {
+    -webkit-transform: translateY(-4rem);
+            transform: translateY(-4rem);
+  }
+}
+
 main .card .card__inner .card__face--back {
   background-color: var(--light);
   -webkit-transform: rotateY(180deg);
@@ -106,7 +177,7 @@ main .card .card__inner .card__face--back .card__header:after {
   background-image: -webkit-gradient(linear, right top, left bottom, color-stop(10%, var(--primary)), color-stop(115%, var(--secondary)));
   background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
   z-index: -1;
-  border-radius: 0px 0px 50% 0px;
+  border-radius: 0px 0px 50% 50%;
 }
 
 main .card .card__inner .card__face--back .pp {
@@ -139,7 +210,7 @@ main .card .card__inner .card__face--back .card__body ul {
   margin: 20px;
 }
 
-main .card .card__inner .card__face--back .card__body .icon-button {
+main .card .card__inner .card__face--back .card__body .icon-contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,20 +220,26 @@ main .card .card__inner .card__face--back .card__body .icon-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 50px;
 }
 
-main .card .card__inner .card__face--back .card__body .icon-button .button {
-  width: 80px;
-  height: 30px;
-  border-radius: 5px;
-  border: 0;
-  background: -webkit-gradient(linear, right top, left bottom, from(var(--primary)), to(var(--secondary)));
-  background: linear-gradient(to bottom left, var(--primary), var(--secondary));
+main .card .card__inner .card__face--back .card__body .icon-contact img {
+  width: 64px;
+  height: 64px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50px;
 }
 
 main .card__inner.is-flipped {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+@media (max-width: 768px) {
+  main .card {
+    width: 60%;
+    height: 80%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -15,14 +15,18 @@
 }
 
 main {
-    width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(195, 34, 191, 1) 0%, rgba(230, 165, 91, 1) 41%, rgba(150, 71, 240, 1) 64%, rgba(253, 128, 45, 1) 100%);
+
 
     .card {
         margin: 100px auto 0;
         width: 400px;
         height: 600px;
-        perspective: 1000px;
+        perspective: 700px;
 
         .card__inner {
             width: 100%;
@@ -42,6 +46,7 @@ main {
                 overflow: hidden;
                 border-radius: 16px;
                 box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+
             }
 
             .card__face--front {
@@ -55,8 +60,50 @@ main {
                     color: #FFF;
                     font-size: 20px;
                 }
-            }
 
+                .seta-img {
+                    height: 100%;
+
+                    img {
+                        position: absolute;
+                        width: 40px;
+                        height: 40px;
+                        object-fit: cover;
+                        bottom: 2%;
+                        right: 2%;
+
+                    }
+                }
+
+                .front-img {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 30px;
+
+
+                    img {
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                        border: solid white 5px;
+                        animation-name: pulo;
+                        animation-duration: 4s;
+                        animation-iteration-count: infinite;
+                        background: var(--primary);
+                    }
+
+                    @keyframes pulo {
+                        50% {
+                            transform: translateY(-4rem);
+                        }
+                    }
+
+                }
+            }
 
             .card__face--back {
                 background-color: var(--light);
@@ -90,7 +137,7 @@ main {
                     bottom: 0;
                     background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
                     z-index: -1;
-                    border-radius: 0px 0px 50% 0px;
+                    border-radius: 0px 0px 50% 50%;
                 }
 
                 .pp {
@@ -122,19 +169,20 @@ main {
                         margin: 20px;
                     }
 
-                    .icon-button {
+                    .icon-contact {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        gap: 20px;
+                        gap: 50px;
 
-                        .button {
-                            width: 80px;
-                            height: 30px;
-                            border-radius: 5px;
-                            border: 0;
-                            background: linear-gradient(to bottom left, var(--primary), var(--secondary));;
+                        img {
+                            width: 64px;
+                            height: 64px;
+                            object-fit: cover;
+                            border-radius: 50px;
                         }
+
+
                     }
                 }
             }
@@ -143,5 +191,13 @@ main {
 
     .card__inner.is-flipped {
         transform: rotateY(180deg);
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            width: 60%;
+            height: 80%;
+        }
+
     }
 }
