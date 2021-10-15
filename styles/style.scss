@@ -22,7 +22,6 @@ main {
     align-items: center;
     background: linear-gradient(0deg, rgba(195, 34, 191, 1) 0%, rgba(230, 165, 91, 1) 41%, rgba(150, 71, 240, 1) 64%, rgba(253, 128, 45, 1) 100%);
 
-
     .card {
         width: 370px;
         height: 550px;
@@ -39,14 +38,11 @@ main {
         animation-name: flip;
         animation-duration: 1s;
 
-
         @keyframes flip {
             100% {
                 transform: rotateY(180deg);
             }
         }
-
-
     }
 
     .card__face {
@@ -58,9 +54,7 @@ main {
         overflow: hidden;
         border-radius: 16px;
         box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
-
     }
-
 }
 
 .card__face--front {
@@ -68,7 +62,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-
 
     h2 {
         color: #FFF;
@@ -85,7 +78,6 @@ main {
             object-fit: cover;
             bottom: 2%;
             right: 2%;
-
         }
     }
 
@@ -97,7 +89,6 @@ main {
         align-items: center;
         justify-content: center;
         gap: 30px;
-
 
         img {
             width: 150px;
@@ -115,7 +106,6 @@ main {
                 transform: translateY(-4rem);
             }
         }
-
     }
 }
 
@@ -170,7 +160,6 @@ main {
         border-radius: 50%;
         background-image: linear-gradient(to bottom left, var(--primary), var(--secondary));
         border: 5px solid #FFF;
-
     }
 
     .card__body {
@@ -202,15 +191,11 @@ main {
             }
         }
 
-
-
         .icon-contact {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 50px;
-
-
 
             img {
                 width: 45px;
@@ -222,7 +207,6 @@ main {
         }
     }
 }
-
 
 .card__inner.is-flipped {
     transform: rotateY(180deg);
