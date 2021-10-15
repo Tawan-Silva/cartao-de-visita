@@ -31,7 +31,7 @@ main {
 }
 
 main .card {
-  width: 370px;
+  width: 350px;
   height: 550px;
   -webkit-perspective: 700px;
           perspective: 700px;
@@ -229,7 +229,7 @@ main .card__face {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 25px 25px 25px;
+  padding: 10px 25px 15px 25px;
 }
 
 .card__face--back .card__body h3 {
