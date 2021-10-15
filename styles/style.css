@@ -31,13 +31,13 @@ main {
 
 main .card {
   margin: 100px auto 0;
-  width: 400px;
+  width: 370px;
   height: 600px;
   -webkit-perspective: 700px;
           perspective: 700px;
 }
 
-main .card .card__inner {
+main .card__inner {
   width: 100%;
   height: 100%;
   -webkit-transition: -webkit-transform 1s;
@@ -50,7 +50,7 @@ main .card .card__inner {
   position: relative;
 }
 
-main .card .card__inner .card__face {
+main .card__face {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -62,7 +62,7 @@ main .card .card__inner .card__face {
           box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
 }
 
-main .card .card__inner .card__face--front {
+.card__face--front {
   background-image: -webkit-gradient(linear, left top, right bottom, from(var(--primary)), to(var(--secondary)));
   background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
   display: -webkit-box;
@@ -76,16 +76,16 @@ main .card .card__inner .card__face--front {
           justify-content: center;
 }
 
-main .card .card__inner .card__face--front h2 {
+.card__face--front h2 {
   color: #FFF;
   font-size: 20px;
 }
 
-main .card .card__inner .card__face--front .seta-img {
+.card__face--front .seta-img {
   height: 100%;
 }
 
-main .card .card__inner .card__face--front .seta-img img {
+.card__face--front .seta-img img {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -95,7 +95,7 @@ main .card .card__inner .card__face--front .seta-img img {
   right: 2%;
 }
 
-main .card .card__inner .card__face--front .front-img {
+.card__face--front .front-img {
   height: 100%;
   width: 100%;
   display: -webkit-box;
@@ -114,7 +114,7 @@ main .card .card__inner .card__face--front .front-img {
   gap: 30px;
 }
 
-main .card .card__inner .card__face--front .front-img img {
+.card__face--front .front-img img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -142,23 +142,23 @@ main .card .card__inner .card__face--front .front-img img {
   }
 }
 
-main .card .card__inner .card__face--back {
+.card__face--back {
   background-color: var(--light);
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-main .card .card__inner .card__face--back .card__content {
+.card__face--back .card__content {
   width: 100%;
   height: 100%;
 }
 
-main .card .card__inner .card__face--back .card__header {
+.card__face--back .card__header {
   position: relative;
   padding: 30px 30px 40px;
 }
 
-main .card .card__inner .card__face--back .card__header h2 {
+.card__face--back .card__header h2 {
   color: #FFF;
   font-size: 25px;
   font-weight: 600;
@@ -166,7 +166,14 @@ main .card .card__inner .card__face--back .card__header h2 {
   text-align: center;
 }
 
-main .card .card__inner .card__face--back .card__header:after {
+@media screen and (max-width: 600px) {
+  .card__face--back .card__header h2 {
+    font-size: 22px;
+    padding: 2px;
+  }
+}
+
+.card__face--back .card__header:after {
   content: '';
   display: block;
   position: absolute;
@@ -180,7 +187,7 @@ main .card .card__inner .card__face--back .card__header:after {
   border-radius: 0px 0px 50% 50%;
 }
 
-main .card .card__inner .card__face--back .pp {
+.card__face--back .pp {
   display: block;
   width: 128px;
   height: 128px;
@@ -191,11 +198,11 @@ main .card .card__inner .card__face--back .pp {
   border: 5px solid #FFF;
 }
 
-main .card .card__inner .card__face--back .card__body {
+.card__face--back .card__body {
   padding: 25px;
 }
 
-main .card .card__inner .card__face--back .card__body h3 {
+.card__face--back .card__body h3 {
   color: var(--dark);
   font-size: 16px;
   font-weight: 600;
@@ -203,14 +210,14 @@ main .card .card__inner .card__face--back .card__body h3 {
   text-align: center;
 }
 
-main .card .card__inner .card__face--back .card__body ul {
+.card__face--back .card__body ul {
   color: var(--dark);
   font-size: 14px;
   line-height: 1.4;
   margin: 20px;
 }
 
-main .card .card__inner .card__face--back .card__body .icon-contact {
+.card__face--back .card__body .icon-contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,23 +230,16 @@ main .card .card__inner .card__face--back .card__body .icon-contact {
   gap: 50px;
 }
 
-main .card .card__inner .card__face--back .card__body .icon-contact img {
-  width: 64px;
-  height: 64px;
+.card__face--back .card__body .icon-contact img {
+  width: 55px;
+  height: 55px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50px;
 }
 
-main .card__inner.is-flipped {
+.card__inner.is-flipped {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-}
-
-@media (max-width: 768px) {
-  main .card {
-    width: 60%;
-    height: 80%;
-  }
 }
 /*# sourceMappingURL=style.css.map */
