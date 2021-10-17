@@ -129,6 +129,17 @@ main .card__face {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 30px;
+  background-image: url(/img/patinhas-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card__face--front .front-img .background {
+  height: 100%;
+  width: 100%;
+  background-image: url(/img/);
+  background-repeat: no-repeat;
 }
 
 .card__face--front .front-img img {
@@ -274,8 +285,8 @@ main .card__face {
 }
 
 .card__face--back .card__body .icon-contact img {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50px;

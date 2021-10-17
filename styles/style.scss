@@ -89,6 +89,18 @@ main {
         align-items: center;
         justify-content: center;
         gap: 30px;
+        background-image: url(/img/patinhas-background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .background {
+            height: 100%;
+            width: 100%;
+            background-image: url(/img/);
+            background-repeat: no-repeat;
+
+        }
 
         img {
             width: 150px;
@@ -198,8 +210,8 @@ main {
             gap: 50px;
 
             img {
-                width: 45px;
-                height: 45px;
+                width: 40px;
+                height: 40px;
                 object-fit: cover;
                 border-radius: 50px;
                 margin-top: 15px;
@@ -211,4 +223,3 @@ main {
 .card__inner.is-flipped {
     transform: rotateY(180deg);
 }
-
