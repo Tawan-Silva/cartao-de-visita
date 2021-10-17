@@ -129,7 +129,7 @@ main .card__face {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 30px;
-  background-image: url(/img/patinhas-background.png);
+  background-image: url(img/patinhas-background.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
