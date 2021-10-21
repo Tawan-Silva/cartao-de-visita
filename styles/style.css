@@ -129,17 +129,15 @@ main .card__face {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 30px;
+}
+
+.card__face--front .front-img {
+  width: 100%;
+  height: 100%;
   background-image: url(img/patinhas-background.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-.card__face--front .front-img .background {
-  height: 100%;
-  width: 100%;
-  background-image: url(/img/);
-  background-repeat: no-repeat;
 }
 
 .card__face--front .front-img img {

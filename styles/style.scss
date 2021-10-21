@@ -89,18 +89,15 @@ main {
         align-items: center;
         justify-content: center;
         gap: 30px;
-        background-image: url(img/patinhas-background.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-
-        .background {
-            height: 100%;
-            width: 100%;
-            background-image: url(/img/);
-            background-repeat: no-repeat;
-
-        }
+        
+       & {
+           width: 100%;
+           height: 100%;
+           background-image: url(img/patinhas-background.png);
+           background-repeat: no-repeat;
+           background-size: cover;
+           background-position: center;
+       }
 
         img {
             width: 150px;
