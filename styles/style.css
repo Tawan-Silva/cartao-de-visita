@@ -112,7 +112,16 @@ main .card__face {
   right: 2%;
 }
 
-.card__face--front .front-img {
+.card__face--front .bg-patinha {
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/patinha-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card__face--front .bg-patinha .front-img {
   height: 100%;
   width: 100%;
   display: -webkit-box;
@@ -131,16 +140,7 @@ main .card__face {
   gap: 30px;
 }
 
-.card__face--front .front-img {
-  width: 100%;
-  height: 100%;
-  background-image: url(/img/patinhas-background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.card__face--front .front-img img {
+.card__face--front .bg-patinha .front-img img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
