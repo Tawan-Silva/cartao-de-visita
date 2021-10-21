@@ -115,12 +115,13 @@ main .card__face {
 .card__face--front .bg-patinha {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .card__face--front .bg-patinha .bg-fundo {
   position: absolute;
-  width: 100%;
   height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -145,6 +146,7 @@ main .card__face {
 }
 
 .card__face--front .bg-patinha .front-img img {
+  position: relative;
   width: 150px;
   height: 150px;
   border-radius: 50%;
