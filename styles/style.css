@@ -134,7 +134,7 @@ main .card__face {
 .card__face--front .front-img {
   width: 100%;
   height: 100%;
-  background-image: url(img/patinhas-background.png);
+  background-image: url(/img/patinhas-background.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
