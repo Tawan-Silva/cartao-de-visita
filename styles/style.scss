@@ -68,18 +68,6 @@ main {
         font-size: 20px;
     }
 
-    .seta-img {
-        height: 100%;
-
-        img {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            object-fit: cover;
-            bottom: 2%;
-            right: 2%;
-        }
-    }
 
     .bg-patinha {
         width: 100%;
@@ -104,7 +92,6 @@ main {
 
 
             img {
-                position: relative;
                 width: 150px;
                 height: 150px;
                 border-radius: 50%;

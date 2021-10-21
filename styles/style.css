@@ -98,20 +98,6 @@ main .card__face {
   font-size: 20px;
 }
 
-.card__face--front .seta-img {
-  height: 100%;
-}
-
-.card__face--front .seta-img img {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  bottom: 2%;
-  right: 2%;
-}
-
 .card__face--front .bg-patinha {
   width: 100%;
   height: 100%;
@@ -146,7 +132,6 @@ main .card__face {
 }
 
 .card__face--front .bg-patinha .front-img img {
-  position: relative;
   width: 150px;
   height: 150px;
   border-radius: 50%;
