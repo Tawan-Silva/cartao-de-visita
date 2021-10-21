@@ -84,12 +84,13 @@ main {
     .bg-patinha {
         width: 100%;
         height: 100%;
-        background-image: url(/img/patinha-bg.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
 
-
+        .bg-fundo {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .front-img {
             height: 100%;
             width: 100%;
