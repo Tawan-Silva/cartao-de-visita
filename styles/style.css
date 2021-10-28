@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 :root {
-  --primary: #da5e2d;
+  --primary: #da982d;
   --secondary: #FE4880;
   --dark: #212121;
   --light: #F3F3F3;
@@ -51,20 +51,6 @@ main .card__inner {
           animation-name: flip;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-}
-
-@-webkit-keyframes flip {
-  100% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-  }
-}
-
-@keyframes flip {
-  100% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-  }
 }
 
 main .card__face {
@@ -175,18 +161,60 @@ main .card__face {
   padding: 30px 30px 40px;
 }
 
-.card__face--back .card__header h2 {
-  color: #FFF;
-  font-size: 25px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-align: center;
+.card__face--back .card__header .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-@media screen and (max-width: 600px) {
-  .card__face--back .card__header h2 {
-    font-size: 22px;
-    padding: 2px;
+.card__face--back .card__header .title p {
+  font-size: 30px;
+  border-right: solid 1px #ffffffbf;
+  -webkit-animation: blinkCursor 700ms infinite normal, titleBorder 5s steps(10) 4s infinite;
+          animation: blinkCursor 700ms infinite normal, titleBorder 5s steps(10) 4s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: 'Dancing Script', cursive;
+}
+
+@-webkit-keyframes blinkCursor {
+  from {
+    border-right-color: #ffffffbf;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: #ffffffbf;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@-webkit-keyframes titleBorder {
+  from {
+    width: 0;
+  }
+  to {
+    width: 6em;
+  }
+}
+
+@keyframes titleBorder {
+  from {
+    width: 0;
+  }
+  to {
+    width: 6em;
   }
 }
 
@@ -198,8 +226,8 @@ main .card__face {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: -webkit-gradient(linear, right top, left bottom, color-stop(10%, var(--primary)), color-stop(115%, var(--secondary)));
-  background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(var(--primary)), to(var(--secondary)));
+  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
   z-index: -1;
   border-radius: 0px 0px 50% 50%;
 }

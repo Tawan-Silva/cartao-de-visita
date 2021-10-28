@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --primary: #da5e2d;
+    --primary: #da982d;
     --secondary: #FE4880;
     --dark: #212121;
     --light: #F3F3F3;
@@ -38,11 +38,6 @@ main {
         animation-name: flip;
         animation-duration: 1s;
 
-        @keyframes flip {
-            100% {
-                transform: rotateY(180deg);
-            }
-        }
     }
 
     .card__face {
@@ -80,6 +75,7 @@ main {
             width: 100%;
             object-fit: cover;
         }
+
         .front-img {
             height: 100%;
             width: 100%;
@@ -124,18 +120,40 @@ main {
         position: relative;
         padding: 30px 30px 40px;
 
-        h2 {
-            color: #FFF;
-            font-size: 25px;
-            font-weight: 600;
-            text-transform: uppercase;
-            text-align: center;
-        }
+        .title {
+            display: flex;
+            justify-content: center;
+            
+            p {
+                font-size: 30px;
+                border-right: solid 1px #ffffffbf;
+                animation: blinkCursor 700ms infinite normal, titleBorder 5s steps(10) 4s infinite;
+                white-space: nowrap;
+                overflow: hidden;
+                text-transform: uppercase;
+                font-weight: 400;
+                font-family: 'Dancing Script', cursive;
+                
 
-        @media screen and (max-width: 600px) {
-            h2 {
-                font-size: 22px;
-                padding: 2px;
+                @keyframes blinkCursor {
+                    from {
+                        border-right-color: #ffffffbf;
+                    }
+
+                    to {
+                        border-right-color: transparent;
+                    }
+                }
+
+                @keyframes titleBorder {
+                    from {
+                        width: 0;
+                    }
+
+                    to {
+                        width: 6em;
+                    }
+                }
             }
         }
 
@@ -149,7 +167,7 @@ main {
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
+        background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
         z-index: -1;
         border-radius: 0px 0px 50% 50%;
     }
