@@ -225,7 +225,7 @@ main .card__face {
 }
 
 .card__face--back .card__header .title p span {
-  color: #ff0000;
+  color: #fff;
   font-family: 'Rampart One', cursive;
 }
 
