@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Rampart+One&display=swap");
 :root {
   --primary: #da982d;
   --secondary: #FE4880;
@@ -53,6 +54,20 @@ main .card__inner {
           animation-duration: 1s;
 }
 
+@-webkit-keyframes flip {
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+@keyframes flip {
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
 main .card__face {
   position: absolute;
   width: 100%;
@@ -96,6 +111,22 @@ main .card__face {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-animation: zoom 3s infinite normal;
+          animation: zoom 3s infinite normal;
+}
+
+@-webkit-keyframes zoom {
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes zoom {
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 
 .card__face--front .bg-patinha .front-img {
@@ -156,6 +187,16 @@ main .card__face {
   height: 100%;
 }
 
+.card__face--back .card__content #coracao {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 100px / 2);
+  height: 90px;
+  width: 90px;
+  -webkit-animation: zoom 3s infinite normal;
+          animation: zoom 3s infinite normal;
+}
+
 .card__face--back .card__header {
   position: relative;
   padding: 30px 30px 40px;
@@ -173,13 +214,19 @@ main .card__face {
 .card__face--back .card__header .title p {
   font-size: 30px;
   border-right: solid 1px #ffffffbf;
-  -webkit-animation: blinkCursor 700ms infinite normal, titleBorder 5s steps(10) 4s infinite;
-          animation: blinkCursor 700ms infinite normal, titleBorder 5s steps(10) 4s infinite;
+  -webkit-animation: blinkCursor 700ms infinite normal, titleBorder 5s steps(9) 4s infinite;
+          animation: blinkCursor 700ms infinite normal, titleBorder 5s steps(9) 4s infinite;
   white-space: nowrap;
   overflow: hidden;
   text-transform: uppercase;
   font-weight: 400;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Rampart One', cursive;
+  color: #000000;
+}
+
+.card__face--back .card__header .title p span {
+  color: #ff0000;
+  font-family: 'Rampart One', cursive;
 }
 
 @-webkit-keyframes blinkCursor {
@@ -205,7 +252,7 @@ main .card__face {
     width: 0;
   }
   to {
-    width: 6em;
+    width: 7.5em;
   }
 }
 
@@ -214,7 +261,7 @@ main .card__face {
     width: 0;
   }
   to {
-    width: 6em;
+    width: 7.5em;
   }
 }
 
@@ -308,6 +355,8 @@ main .card__face {
      object-fit: cover;
   border-radius: 50px;
   margin-top: 15px;
+  -webkit-animation: zoom 2s infinite normal;
+          animation: zoom 2s infinite normal;
 }
 
 .card__inner.is-flipped {

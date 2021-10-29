@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Rampart+One&display=swap');
 
 :root {
     --primary: #da982d;
@@ -38,6 +39,11 @@ main {
         animation-name: flip;
         animation-duration: 1s;
 
+        @keyframes flip {
+            100% {
+                transform: rotateY(180deg);
+            }
+        }
     }
 
     .card__face {
@@ -74,6 +80,13 @@ main {
             height: 100%;
             width: 100%;
             object-fit: cover;
+            animation: zoom 3s infinite normal;
+
+            @keyframes zoom {
+                50% {
+                    transform: scale(1.1);
+                }
+            }
         }
 
         .front-img {
@@ -114,6 +127,16 @@ main {
     .card__content {
         width: 100%;
         height: 100%;
+
+        #coracao {
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 100px / 2);
+            height: 90px;
+            width: 90px;
+            animation: zoom 3s infinite normal;
+        }
+        
     }
 
     .card__header {
@@ -123,17 +146,24 @@ main {
         .title {
             display: flex;
             justify-content: center;
-            
+
             p {
                 font-size: 30px;
                 border-right: solid 1px #ffffffbf;
-                animation: blinkCursor 700ms infinite normal, titleBorder 5s steps(10) 4s infinite;
+                animation: blinkCursor 700ms infinite normal, titleBorder 5s steps(9) 4s infinite;
                 white-space: nowrap;
                 overflow: hidden;
                 text-transform: uppercase;
                 font-weight: 400;
-                font-family: 'Dancing Script', cursive;
-                
+                font-family: 'Rampart One', cursive;
+                color: #000000;
+
+
+                span {
+                    color: #ff0000;
+                    font-family: 'Rampart One', cursive;
+                }
+
 
                 @keyframes blinkCursor {
                     from {
@@ -151,7 +181,7 @@ main {
                     }
 
                     to {
-                        width: 6em;
+                        width: 7.5em;
                     }
                 }
             }
@@ -222,11 +252,15 @@ main {
                 object-fit: cover;
                 border-radius: 50px;
                 margin-top: 15px;
+                animation: zoom 2s infinite normal;
             }
         }
     }
+
 }
 
 .card__inner.is-flipped {
     transform: rotateY(180deg);
 }
+
+
